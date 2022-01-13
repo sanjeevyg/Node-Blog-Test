@@ -1,7 +1,9 @@
 const express = require('express')
-const app = express()
-
+const bodyParser = require("body-parser")
 const cors = require('cors')
+
+const app = express()
+app.use(bodyParser.json());
 app.use(cors())
 
 
@@ -10,8 +12,6 @@ const bcrypt = require('bcrypt')
 
 const port = 4000
 
-const bodyParser = require("body-parser")
-app.use(bodyParser.json());
 
 
 app.listen(port, () => {console.log(`listening to the port ${port}`)})
