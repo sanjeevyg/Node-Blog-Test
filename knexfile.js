@@ -4,7 +4,8 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgress:///node-auth'
+    connection: 'postgress:///node-auth',
+    start: "nodemon start"
   },
 
 

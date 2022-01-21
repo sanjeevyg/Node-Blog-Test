@@ -12,8 +12,6 @@ const bcrypt = require('bcrypt')
 
 const port = 4000
 
-
-
 app.listen(port, () => {console.log(`listening to the port ${port}`)})
 
 const knex = require('knex')
