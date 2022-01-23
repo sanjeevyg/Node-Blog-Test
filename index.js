@@ -32,6 +32,16 @@ app.get('/', (request, response) => {
     })
 })
 
+app.get('/:id', (request, response) => {
+    const id = request.body.id
+    database("users")
+    .where(id === id)
+    .select()
+    .then(user => {
+        response.json(user)
+    })
+})
+
 
 app.post("/users", ( request, response ) => {
     const { user } = request.body
